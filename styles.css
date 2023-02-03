@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkcyan: hsl(179, 100%, 13%);
+    --transwhite: hsla(0, 0%, 100%, 0.75);
+    --lightgray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+main {
+    width: 375px;
+    margin-block: 2em;
+}
+
+section {
+    padding: 2em;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.sedans {
+    background-color: var(--orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.suvs {
+    background-color: var(--cyan);
+}
+
+.luxury {
+    background-color: var(--darkcyan);
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--lightgray);
+    margin-top: 1em;
+}
+
+p {
+    color: var(--transwhite);
+    margin-top: 2em;
+}
+
+.btn {
+    font-family: inherit;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 1em 2em;
+    margin-top: 2em;
+}
+
+.btn-sedans {
+    color: var(--orange);
+}
+
+.btn-suvs {
+    color: var(--cyan);
+}
+
+.btn-luxury {
+    color: var(--darkcyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 800px) {
+    main {
+        width: 800px;
+        display: flex;
+    }
+
+    .sedans {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+}
